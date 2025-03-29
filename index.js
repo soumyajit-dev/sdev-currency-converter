@@ -24,5 +24,3 @@ export async function convertCurrency(fromCurrency, toCurrency, units) {
 	const multiplier = response.data[toCurrency];
 	return multiplier * units;
 }
-
-convertCurrency('USD', 'INR', 3);
