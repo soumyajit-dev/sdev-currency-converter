@@ -1,6 +1,6 @@
 {
 	"name": "sdev-currency-converter",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "NPM package for converting currency",
 	"main": "index.js",
 	"types": "index.d.ts",
