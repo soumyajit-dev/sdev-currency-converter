@@ -1,7 +1,6 @@
 import Freecurrencyapi from '@everapi/freecurrencyapi-js';
-require('dotenv').config();
 
-const freecurrencyapi = new Freecurrencyapi(freecurrencyapi());
+const freecurrencyapi = new Freecurrencyapi(env.FREECURRENCYAPI);
 
 /**
  * Converts a given amount from one currency to another using the latest exchange rates.
