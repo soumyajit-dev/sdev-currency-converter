@@ -6,19 +6,18 @@ Need to convert currency amounts in your Node.js app? This package makes it easy
 
 - 🔄 Convert from any currency to another
 - ⚡ Real-time exchange rates (via Freecurrencyapi)
-- 🔧 Easy setup with a `.env` file
 - 🪶 Lightweight and beginner-friendly
 
 ## 📦 Install It
 
 ```bash
-npm install currency-converter-api
+npm install --save sdev-currency-converter
 ```
 
 ## 🚀 How to Use It
 
 ```js
-import { convertCurrency } from 'currency-converter-api';
+import { convertCurrency } from 'sdev-currency-converter';
 
 const amount = await convertCurrency('USD', 'INR', 3);
 console.log(`Converted amount: ₹${amount}`);
