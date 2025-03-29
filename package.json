@@ -1,0 +1,27 @@
+{
+	"name": "sdev-currency-converter",
+	"version": "1.0.0",
+	"description": "NPM package for converting currency",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"test": "npm run test"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/soumyajit-dev/sdev-currency-converter.git"
+	},
+	"keywords": [
+		"npm"
+	],
+	"author": "Soumyajit Sarkar",
+	"license": "Apache-2.0",
+	"bugs": {
+		"url": "https://github.com/soumyajit-dev/sdev-currency-converter/issues"
+	},
+	"homepage": "https://github.com/soumyajit-dev/sdev-currency-converter#readme",
+	"dependencies": {
+		"@everapi/freecurrencyapi-js": "^1.0.1",
+		"dotenv": "^16.4.7"
+	}
+}
