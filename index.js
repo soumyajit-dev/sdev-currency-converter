@@ -1,11 +1,5 @@
 import Freecurrencyapi from '@everapi/freecurrencyapi-js';
-// import dotenv from 'dotenv';
-
-// dotenv.config();
-
-function freecurrencyapi() {
-	return fca_live_6x1hsOvMHBhP1E81ue5FJ2ZySI0TM4qJxFfonCuJ;
-}
+require('dotenv').config();
 
 const freecurrencyapi = new Freecurrencyapi(freecurrencyapi());
 

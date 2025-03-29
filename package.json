@@ -1,6 +1,6 @@
 {
 	"name": "sdev-currency-converter",
-	"version": "1.0.4",
+	"version": "1.1.0",
 	"description": "NPM package for converting currency",
 	"main": "index.js",
 	"types": "index.d.ts",
@@ -21,6 +21,7 @@
 	},
 	"homepage": "https://github.com/soumyajit-dev/sdev-currency-converter#readme",
 	"dependencies": {
-		"@everapi/freecurrencyapi-js": "^1.0.1"
+		"@everapi/freecurrencyapi-js": "^1.0.1",
+		"dotenv": "^16.4.7"
 	}
 }
