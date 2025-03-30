@@ -1,6 +1,6 @@
 import Freecurrencyapi from '@everapi/freecurrencyapi-js';
 
-const freecurrencyapi = new Freecurrencyapi(env.FREECURRENCYAPI);
+const freecurrencyapi = new Freecurrencyapi(process.env.FREECURRENCYAPI);
 
 /**
  * Converts a given amount from one currency to another using the latest exchange rates.

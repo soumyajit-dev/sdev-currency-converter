@@ -1,10 +1,13 @@
 {
 	"name": "sdev-currency-converter",
-	"version": "1.1.1",
+	"version": "1.0.0",
 	"description": "NPM package for converting currency",
 	"main": "index.js",
+	"type": "module",
 	"types": "index.d.ts",
 	"scripts": {
+		"start": "node --env-file .env index.js",
+		"build": "node --env-file .env index.js",
 		"test": "npm run test"
 	},
 	"repository": {
