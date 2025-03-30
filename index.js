@@ -1,4 +1,5 @@
 const currencyCode = require('./countryCode').CURRENCYCODE;
+require('dotenv').config();
 
 let currencyFrom = '';
 let currencyTo = '';
@@ -31,7 +32,7 @@ exports.convertCurrency = async function (fromCurrency, toCurrency, units) {
 };
 
 async function getRates() {
-	const API_KEY = '8727c5009c846905795ecb98';
+	const API_KEY = process.env.FREECURRENCYAPI;
 	const BASE_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}/latest`;
 
 	try {
