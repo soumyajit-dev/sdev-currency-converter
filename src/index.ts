@@ -1,6 +1,6 @@
-const currencyCode = require('./countryCode').CURRENCYCODE;
-require('dotenv').config();
+import { CURRENCYCODE } from './countryCode';
 
+const currencyCode = CURRENCYCODE;
 let currencyFrom = '';
 let currencyTo = '';
 let currencyAmount = 0;
@@ -11,19 +11,19 @@ let currencyAmount = 0;
  * @async
  * @function
  * @param {string} fromCurrency - The currency code to convert **from** (e.g., "USD").
- * @param {string} toCurrency - The currency code to convert **to** (e.g., "EUR").
+ * @param {string} toCurrency - The currency code to convert **to** (e.g., "INR").
  * @param {number} units - The amount in the source currency to convert.
  * @returns {Promise<number>} The converted amount in the target currency.
  */
-exports.convertCurrency = async function (fromCurrency, toCurrency, units) {
+export const convertCurrency = async (fromCurrency: string, toCurrency: string, units: number): Promise<number> => {
 	if (fromCurrency !== undefined) from(fromCurrency);
 	if (toCurrency !== undefined) to(toCurrency);
 	if (units !== undefined) amount(units);
 
 	try {
 		const result = await getRates();
-		const rate = result.conversion_rates[currencyTo];
-		const converted = (currencyAmount * rate).toFixed(2);
+		const rate: number = result.conversion_rates[currencyTo];
+		const converted = +(currencyAmount * rate).toFixed(2);
 
 		return converted;
 	} catch (err) {
@@ -31,8 +31,8 @@ exports.convertCurrency = async function (fromCurrency, toCurrency, units) {
 	}
 };
 
-async function getRates() {
-	const API_KEY = process.env.FREECURRENCYAPI;
+async function getRates(): Promise<any> {
+	const API_KEY = '8727c5009c846905795ecb98';
 	const BASE_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}/latest`;
 
 	try {
@@ -47,7 +47,7 @@ async function getRates() {
 	}
 }
 
-function from(from) {
+function from(from: string) {
 	if (typeof from !== 'string') throw new TypeError('currency code should be a string');
 
 	if (!currencyCode.includes(from.toUpperCase())) throw new Error(`${from} is not a valid currency code`);
@@ -55,7 +55,7 @@ function from(from) {
 	currencyFrom = from.toUpperCase();
 }
 
-function to(to) {
+function to(to: string) {
 	if (typeof to !== 'string') throw new TypeError('currency code should be a string');
 
 	if (!currencyCode.includes(to.toUpperCase())) throw new Error(`${to} is not a valid currency code`);
@@ -63,7 +63,7 @@ function to(to) {
 	currencyTo = to.toUpperCase();
 }
 
-function amount(amount) {
+function amount(amount: number) {
 	if (typeof amount !== 'number') throw new TypeError('amount should be a number');
 
 	if (amount <= 0) throw new Error('amount should be a positive number');

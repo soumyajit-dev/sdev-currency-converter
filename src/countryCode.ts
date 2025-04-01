@@ -1,4 +1,4 @@
-exports.CURRENCYCODE = [
+export const CURRENCYCODE = [
 	'AFN',
 	'ALL',
 	'DZD',
